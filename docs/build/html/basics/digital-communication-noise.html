@@ -47,12 +47,11 @@
 <li class="toctree-l1"><a class="reference internal" href="natural-noise.html">Natural Noise Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man-made-noise.html">Man-Made Noise (Electromagnetic Pollution)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html">Receiver &amp; Station-Generated Noise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html#thermal-noise">Thermal Noise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html#common-mode-current-noise">Common Mode Current Noise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html#intermodulation-mixing-products">Intermodulation &amp; Mixing Products</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Digital &amp; Communication-Related Noise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Digital &amp; Communication-Related Noise</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="common-sources.html">Common HF Noise Sources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
@@ -106,24 +105,24 @@
   <section id="digital-communication-related-noise">
 <h1>Digital &amp; Communication-Related Noise<a class="headerlink" href="#digital-communication-related-noise" title="Link to this heading"></a></h1>
 <p>Interference from digital transmissions.</p>
-</section>
 <section id="broadband-data-emissions-plc-dsl-ethernet">
-<h1>Broadband Data Emissions (PLC, DSL, Ethernet)<a class="headerlink" href="#broadband-data-emissions-plc-dsl-ethernet" title="Link to this heading"></a></h1>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Source: Power line communication devices, Ethernet over unshielded cables.
-•	Characteristics: Continuous broadband hash across HF bands.
-•	Identification: Peaks around known DSL/PLC frequencies.
-•	Mitigation: Use shielded cables, distance antennas from sources.
-</pre></div>
-</div>
+<h2>Broadband Data Emissions (PLC, DSL, Ethernet)<a class="headerlink" href="#broadband-data-emissions-plc-dsl-ethernet" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Source: Power line communication devices, Ethernet over unshielded cables.</p></li>
+<li><p>Characteristics: Continuous broadband hash across HF bands.</p></li>
+<li><p>Identification: Peaks around known DSL/PLC frequencies.</p></li>
+<li><p>Mitigation: Use shielded cables, distance antennas from sources.</p></li>
+</ul>
 </section>
 <section id="switching-digital-logic-noise">
-<h1>Switching Digital Logic Noise<a class="headerlink" href="#switching-digital-logic-noise" title="Link to this heading"></a></h1>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Source: Microcontrollers, SDR devices, USB hubs.
-•	Characteristics: Spikes at processor clock frequencies.
-•	Identification: Measured using an SDR waterfall.
-•	Mitigation: Use proper shielding, move RF-sensitive equipment away from computers.
-</pre></div>
-</div>
+<h2>Switching Digital Logic Noise<a class="headerlink" href="#switching-digital-logic-noise" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Source: Microcontrollers, SDR devices, USB hubs.</p></li>
+<li><p>Characteristics: Spikes at processor clock frequencies.</p></li>
+<li><p>Identification: Measured using an SDR waterfall.</p></li>
+<li><p>Mitigation: Use proper shielding, move RF-sensitive equipment away from computers.</p></li>
+</ul>
+</section>
 </section>
 
 

@@ -112,29 +112,39 @@
 <h1>Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals<a class="headerlink" href="#case-study-4-repeating-spectral-humps-at-1-8mhz-intervals" title="Link to this heading"></a></h1>
 <section id="symptom">
 <h2>Symptom:<a class="headerlink" href="#symptom" title="Link to this heading"></a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Wavy noise peaks appear every 1.8 MHz, gradually decreasing in amplitude up to 9 MHz.
-•	The pattern is consistent but changes when unplugging a certain device.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>Wavy noise peaks appear every 1.8 MHz, gradually decreasing in amplitude up to 9 MHz.</p></li>
+<li><p>The pattern is consistent but changes when unplugging a certain device.</p></li>
+</ul>
 </section>
 <section id="analysis">
 <h2>Analysis:<a class="headerlink" href="#analysis" title="Link to this heading"></a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	This pattern suggests harmonics of a switching power supply.
-•	Many cheap wall warts, LED drivers, and computer chargers generate harmonic noise.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>This pattern suggests harmonics of a switching power supply.</p></li>
+<li><p>Many cheap wall warts, LED drivers, and computer chargers generate harmonic noise.</p></li>
+</ul>
 </section>
 <section id="mitigation-steps">
 <h2>Mitigation Steps:<a class="headerlink" href="#mitigation-steps" title="Link to this heading"></a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1.	Identify the Device:
-•	Unplug switching power supplies one at a time and observe changes in the waterfall.
-2.	Replace or Shield:
-•	If a device is the culprit, swap it for a linear power supply.
-•	If replacement isn’t possible, add ferrite chokes (Mix 43 for VHF, Mix 31 for HF) to the DC output.
-3.	Filter the Power Line:
-•	Use an AC line filter to block conducted emissions.
-</pre></div>
-</div>
+<ol class="arabic simple">
+<li><p>Identify the Device:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Unplug switching power supplies one at a time and observe changes in the waterfall.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Replace or Shield:</p></li>
+</ol>
+<ul class="simple">
+<li><p>If a device is the culprit, swap it for a linear power supply.</p></li>
+<li><p>If replacement isn’t possible, add ferrite chokes (Mix 43 for VHF, Mix 31 for HF) to the DC output.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Filter the Power Line:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Use an AC line filter to block conducted emissions.</p></li>
+</ul>
 </section>
 </section>
 
