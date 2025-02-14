@@ -33,7 +33,7 @@ Example: Two FM stations at 88.5 MHz and 99.5 MHz could produce an intermodulati
 - LimeSDR USB (61.44 MSPS): Aliasing above 30.72 MHz.
 - Ettus USRP B210 (up to 61.44 MSPS): Aliasing above 30.72 MHz.
 - Ettus USRP X310 (up to 129.6 MSPS): Aliasing above 64.8 MHz.
-- RX888 (64.8 or 129.6 MSPS)
+- RX888 (64.8 or 129.6 MSPS): Aliasing above 32.4 or 64.8. MHz.
 - Check for Aliasing Boundaries
 - If you are running a 64.8 MSPS SDR, expect aliasing from signals above 32.4 MHz to fold back into your spectrum.
 - If FM broadcast signals (88–108 MHz) alias into your HF display, the sampling rate is likely too low, or strong signals are overloading the SDR front end.
