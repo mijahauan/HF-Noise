@@ -15,16 +15,19 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+ 	'myst_parser',
 	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
 	'sphinx.ext.napoleon',
- 	'myst_parser'
+	'sphinx.ext.mathjax',
+]
+
+myst_enable_extensions = [
+    "amsmath",  # Enables AMS-style math environments like align
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

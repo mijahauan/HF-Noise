@@ -18,7 +18,9 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Noise Mitigation Techniques" href="noise-mitigation.html" />
+    <link rel="prev" title="Noise Measurement Tools" href="noise-measurement-tools.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,11 +53,54 @@
 <li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/common-sources.html">Common HF Noise Sources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="noise-detection-tools.html">Noise Detection Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise-measurement-tools.html">Noise Measurement Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Noise Source Localization Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#direction-finding-methods">Direction-Finding Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-of-directional-antennas">Use of Directional Antennas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-small-loops-yagi-antennas-ferrite-rod-antennas">Examples: Small loops, Yagi antennas, ferrite rod antennas.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#triangulation">Triangulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Usage:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#noise-hunting-with-portable-receivers">Noise-Hunting with Portable Receivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#handheld-am-radios">Handheld AM Radios</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hf-portable-receivers-e-g-tecsun-sony-models">HF Portable Receivers (e.g., Tecsun, Sony models)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Usage:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#controlled-power-down-testing">Controlled Power-Down Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sequential-power-off-technique">Sequential Power-Off Technique</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#battery-powered-operation-test">Battery-Powered Operation Test</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Usage:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conducted-vs-radiated-noise-testing">Conducted vs. Radiated Noise Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-for-conducted-noise">Check for Conducted Noise:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-for-radiated-noise">Check for Radiated Noise:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="noise-mitigation.html">Noise Mitigation Techniques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
@@ -66,6 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-6.html">Case Study 6: Suspected FM Broadcast Station Interference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul>
@@ -194,7 +240,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="noise-measurement-tools.html" class="btn btn-neutral float-left" title="Noise Measurement Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="noise-mitigation.html" class="btn btn-neutral float-right" title="Noise Mitigation Techniques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

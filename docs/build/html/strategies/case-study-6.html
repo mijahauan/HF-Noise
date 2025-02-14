@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case Study: Suspected FM Broadcast Station Interference &mdash; RTD-test 0.0.1 documentation</title>
+  <title>Case Study 6: Suspected FM Broadcast Station Interference &mdash; RTD-test 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -16,6 +16,7 @@
       <script src="../_static/documentation_options.js?v=d45e8c67"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -70,12 +71,24 @@
 <li class="toctree-l1"><a class="reference internal" href="case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Case Study: Suspected FM Broadcast Station Interference</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Case Study 6: Suspected FM Broadcast Station Interference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#symptom">Symptom:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-identify-artifacts-from-fm-broadcast-stations">Step 1: Identify Artifacts from FM Broadcast Stations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior">Step 2: Investigate the SDR’s Sampling Rate and Front-End Behavior</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-verify-the-fm-source">Step 3: Verify the FM Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-4-mitigation-techniques">Step 4: Mitigation Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-identify-artifacts-from-fm-broadcast-stations">Step 1: Identify Artifacts from FM Broadcast Stations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fm-broadcast-stations-operate-in-the-88108-mhz-range-and-are-high-power-transmitters-often-tens-or-hundreds-of-kilowatts-erp-if-they-are-interfering-with-your-sdr-you-might-observe">FM broadcast stations operate in the 88–108 MHz range and are high-power transmitters (often tens or hundreds of kilowatts ERP). If they are interfering with your SDR, you might observe:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior">Step 2: Investigate the SDR’s Sampling Rate and Front-End Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#knowing-the-sampling-rate-helps-predict-aliasing-behavior">Knowing the sampling rate helps predict aliasing behavior.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-verify-the-fm-source">Step 3: Verify the FM Source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#to-confirm-that-local-fm-stations-are-the-problem">To confirm that local FM stations are the problem:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-mitigation-techniques">Step 4: Mitigation Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#once-you-confirm-that-fm-broadcast-stations-are-interfering-try-the-following-solutions">Once you confirm that FM broadcast stations are interfering, try the following solutions:</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
@@ -101,7 +114,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Case Study: Suspected FM Broadcast Station Interference</li>
+      <li class="breadcrumb-item active">Case Study 6: Suspected FM Broadcast Station Interference</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/strategies/case-study-6.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -111,85 +124,101 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="case-study-suspected-fm-broadcast-station-interference">
-<h1>Case Study: Suspected FM Broadcast Station Interference<a class="headerlink" href="#case-study-suspected-fm-broadcast-station-interference" title="Link to this heading"></a></h1>
+  <section id="case-study-6-suspected-fm-broadcast-station-interference">
+<h1>Case Study 6: Suspected FM Broadcast Station Interference<a class="headerlink" href="#case-study-6-suspected-fm-broadcast-station-interference" title="Link to this heading"></a></h1>
 <section id="symptom">
 <h2>Symptom:<a class="headerlink" href="#symptom" title="Link to this heading"></a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Unusual spikes or patterns appear on the spectrum display at unexpected frequencies, often in the VHF range (above 30 MHz) but sometimes in HF bands as well.
-•	The artifacts increase in intensity when pointing a directional antenna toward a known FM broadcast tower.
-•	The SDR’s front-end overloads, causing broad, unpredictable interference across the spectrum.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>Unusual spikes or patterns appear on the spectrum display at unexpected frequencies, often in the VHF range (above 30 MHz) but sometimes in HF bands as well.</p></li>
+<li><p>The artifacts increase in intensity when pointing a directional antenna toward a known FM broadcast tower.</p></li>
+<li><p>The SDR’s front-end overloads, causing broad, unpredictable interference across the spectrum.</p></li>
+</ul>
 </section>
 <section id="step-1-identify-artifacts-from-fm-broadcast-stations">
 <h2>Step 1: Identify Artifacts from FM Broadcast Stations<a class="headerlink" href="#step-1-identify-artifacts-from-fm-broadcast-stations" title="Link to this heading"></a></h2>
-<p>FM broadcast stations operate in the 88–108 MHz range and are high-power transmitters (often tens or hundreds of kilowatts ERP). If they are interfering with your SDR, you might observe:
-•	Harmonics &amp; Mixing Products
-•	Some FM transmitters generate harmonics, appearing at multiples of their fundamental frequency (e.g., a 100 MHz station producing harmonics at 200, 300 MHz).
-•	If your SDR has weak front-end filtering, mixing products from FM stations can appear in unexpected places.
-•	Intermodulation Distortion (IMD)
-•	If multiple FM stations are strong at your location, their signals can mix inside the SDR or a nearby nonlinear junction (e.g., corroded metal connections), generating sum and difference frequencies that may appear in the HF spectrum.
-•	Example: Two FM stations at 88.5 MHz and 99.5 MHz could produce an intermodulation product at:</p>
-<p>99.5 - 88.5 = 11 \text{ MHz}  \quad \text{(inside HF range)}</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Aliasing (Due to SDR Sampling Rate Limits)
-•	If the sampling rate of your SDR is lower than twice the frequency of incoming signals (Nyquist criterion violation), FM signals may “fold over” into your spectrum.
-•	Example: If your SDR has a 2.048 MSPS sampling rate, any signal above 1.024 MHz (half the sampling rate) may alias into the displayed spectrum.
-</pre></div>
-</div>
+<section id="fm-broadcast-stations-operate-in-the-88108-mhz-range-and-are-high-power-transmitters-often-tens-or-hundreds-of-kilowatts-erp-if-they-are-interfering-with-your-sdr-you-might-observe">
+<h3>FM broadcast stations operate in the 88–108 MHz range and are high-power transmitters (often tens or hundreds of kilowatts ERP). If they are interfering with your SDR, you might observe:<a class="headerlink" href="#fm-broadcast-stations-operate-in-the-88108-mhz-range-and-are-high-power-transmitters-often-tens-or-hundreds-of-kilowatts-erp-if-they-are-interfering-with-your-sdr-you-might-observe" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Harmonics &amp; Mixing Products</p></li>
+<li><p>Some FM transmitters generate harmonics, appearing at multiples of their fundamental frequency (e.g., a 100 MHz station producing harmonics at 200, 300 MHz).</p></li>
+<li><p>If your SDR has weak front-end filtering, mixing products from FM stations can appear in unexpected places.</p></li>
+<li><p>Intermodulation Distortion (IMD)</p></li>
+<li><p>If multiple FM stations are strong at your location, their signals can mix inside the SDR or a nearby nonlinear junction (e.g., corroded metal connections), generating sum and difference frequencies that may appear in the HF spectrum.
+Example: Two FM stations at 88.5 MHz and 99.5 MHz could produce an intermodulation product at:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(99.5 - 88.5 = 11 \text{ MHz}  \quad \text{(inside HF range)}\)</span></p>
+<ul class="simple">
+<li><p>Aliasing (Due to SDR Sampling Rate Limits)</p></li>
+<li><p>If the sampling rate of your SDR is lower than twice the frequency of incoming signals (Nyquist criterion violation), FM signals may “fold over” into your spectrum.</p></li>
+<li><p>Example: If your SDR has a 2.048 MSPS sampling rate, any signal above 1.024 MHz (half the sampling rate) may alias into the displayed spectrum.</p></li>
+</ul>
+</section>
 </section>
 <section id="step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior">
 <h2>Step 2: Investigate the SDR’s Sampling Rate and Front-End Behavior<a class="headerlink" href="#step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior" title="Link to this heading"></a></h2>
-<p>Knowing the sampling rate helps predict aliasing behavior.
-•	Wideband SDRs Have Higher Nyquist Limits
-•	Airspy HF+ Discovery (6.144 MSPS): Aliasing above 3.072 MHz.
-•	SDRplay RSPdx (10 MSPS): Aliasing above 5 MHz.
-•	HackRF One (20 MSPS): Aliasing above 10 MHz.
-•	LimeSDR Mini (30.72 MSPS): Aliasing above 15.36 MHz.
-•	LimeSDR USB (61.44 MSPS): Aliasing above 30.72 MHz.
-•	Ettus USRP B210 (up to 61.44 MSPS): Aliasing above 30.72 MHz.
-•	Ettus USRP X310 (up to 129.6 MSPS): Aliasing above 64.8 MHz.
-•	RX888 (64.8 or 129.6 MSPS)
-•	Check for Aliasing Boundaries
-•	If you are running a 64.8 MSPS SDR, expect aliasing from signals above 32.4 MHz to fold back into your spectrum.
-•	If FM broadcast signals (88–108 MHz) alias into your HF display, the sampling rate is likely too low, or strong signals are overloading the SDR front end.
-•	Check for Front-End Overload
-•	Some SDRs lack front-end band-pass filtering, allowing strong local FM signals to cause desensitization or intermodulation distortion across the spectrum.
-•	Try reducing gain settings in your SDR software to see if the artifacts reduce.</p>
+<section id="knowing-the-sampling-rate-helps-predict-aliasing-behavior">
+<h3>Knowing the sampling rate helps predict aliasing behavior.<a class="headerlink" href="#knowing-the-sampling-rate-helps-predict-aliasing-behavior" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Wideband SDRs Have Higher Nyquist Limits</p></li>
+<li><p>Airspy HF+ Discovery (6.144 MSPS): Aliasing above 3.072 MHz.</p></li>
+<li><p>SDRplay RSPdx (10 MSPS): Aliasing above 5 MHz.</p></li>
+<li><p>HackRF One (20 MSPS): Aliasing above 10 MHz.</p></li>
+<li><p>LimeSDR Mini (30.72 MSPS): Aliasing above 15.36 MHz.</p></li>
+<li><p>LimeSDR USB (61.44 MSPS): Aliasing above 30.72 MHz.</p></li>
+<li><p>Ettus USRP B210 (up to 61.44 MSPS): Aliasing above 30.72 MHz.</p></li>
+<li><p>Ettus USRP X310 (up to 129.6 MSPS): Aliasing above 64.8 MHz.</p></li>
+<li><p>RX888 (64.8 or 129.6 MSPS)</p></li>
+<li><p>Check for Aliasing Boundaries</p></li>
+<li><p>If you are running a 64.8 MSPS SDR, expect aliasing from signals above 32.4 MHz to fold back into your spectrum.</p></li>
+<li><p>If FM broadcast signals (88–108 MHz) alias into your HF display, the sampling rate is likely too low, or strong signals are overloading the SDR front end.</p></li>
+<li><p>Check for Front-End Overload</p></li>
+<li><p>Some SDRs lack front-end band-pass filtering, allowing strong local FM signals to cause desensitization or intermodulation distortion across the spectrum.</p></li>
+<li><p>Try reducing gain settings in your SDR software to see if the artifacts reduce.</p></li>
+</ul>
+</section>
 </section>
 <section id="step-3-verify-the-fm-source">
 <h2>Step 3: Verify the FM Source<a class="headerlink" href="#step-3-verify-the-fm-source" title="Link to this heading"></a></h2>
-<p>To confirm that local FM stations are the problem:
-1.	Use a Band-Pass Filter for HF
-•	Insert a high-pass or band-pass filter before the SDR to block VHF signals from reaching the front end.
-•	If FM interference disappears, it was likely front-end overload.
+<section id="to-confirm-that-local-fm-stations-are-the-problem">
+<h3>To confirm that local FM stations are the problem:<a class="headerlink" href="#to-confirm-that-local-fm-stations-are-the-problem" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1.	Use a Band-Pass Filter for HF
+- Insert a high-pass or band-pass filter before the SDR to block VHF signals from reaching the front end.
+- If FM interference disappears, it was likely front-end overload.
 2.	Listen in WFM Mode
-•	Tune your SDR to 88–108 MHz and listen in wideband FM mode.
-•	Identify strong signals and note the most powerful stations.
+- Tune your SDR to 88–108 MHz and listen in wideband FM mode.
+-Identify strong signals and note the most powerful stations.
 3.	Check for Mix Products Using a Second SDR
-•	If you have another receiver, use it to check if the same artifacts appear.
-•	If only one receiver is affected, the issue is likely internal to that SDR (aliasing, overload, or poor filtering).</p>
+- If you have another receiver, use it to check if the same artifacts appear.
+- If only one receiver is affected, the issue is likely internal to that SDR (aliasing, overload, or poor filtering).
+</pre></div>
+</div>
+</section>
 </section>
 <section id="step-4-mitigation-techniques">
 <h2>Step 4: Mitigation Techniques<a class="headerlink" href="#step-4-mitigation-techniques" title="Link to this heading"></a></h2>
-<p>Once you confirm that FM broadcast stations are interfering, try the following solutions:
-1.	Use a Broadcast Band Notch Filter
-•	A notch filter for 88–108 MHz can prevent FM signals from overloading the SDR.
-•	These are available as commercial filters (e.g., RTL-SDR Blog FM Notch, Nooelec Flamingo+ FM) or DIY tuned circuits.
+<section id="once-you-confirm-that-fm-broadcast-stations-are-interfering-try-the-following-solutions">
+<h3>Once you confirm that FM broadcast stations are interfering, try the following solutions:<a class="headerlink" href="#once-you-confirm-that-fm-broadcast-stations-are-interfering-try-the-following-solutions" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1.	Use a Broadcast Band Notch Filter
+- A notch filter for 88–108 MHz can prevent FM signals from overloading the SDR.
+- These are available as commercial filters (e.g., RTL-SDR Blog FM Notch, Nooelec Flamingo+ FM) or DIY tuned circuits.
 2.	Reduce SDR Gain
-•	Lowering gain settings can reduce overload distortion without significantly affecting HF signals.
+- Lowering gain settings can reduce overload distortion without significantly affecting HF signals.
 3.	Use a Better Antenna Setup
-•	If using an active preamp, place an FM trap filter before the amplifier.
-•	Reorient antennas to minimize pickup of nearby broadcast stations.
+- If using an active preamp, place an FM trap filter before the amplifier.
+- Reorient antennas to minimize pickup of nearby broadcast stations.
 4.	Improve SDR Shielding
-•	Some SDRs (like cheap RTL-SDR dongles) lack proper shielding, allowing strong RF to leak into the circuit.
-•	Using a metal enclosure or a better-shielded SDR (e.g., Airspy HF+, SDRplay RSPdx) can help.</p>
+- Some SDRs (like cheap RTL-SDR dongles) lack proper shielding, allowing strong RF to leak into the circuit.
+- Using a metal enclosure or a better-shielded SDR (e.g., Airspy HF+, SDRplay RSPdx) can help.
+</pre></div>
+</div>
+</section>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
 <p>By knowing your SDR’s sampling rate, gain settings, and front-end behavior, you can determine whether FM signals are causing harmonics, mixing products, intermodulation, or aliasing.
 For wideband SDRs like the RX888 (129.6 MSPS or 64.8 MSPS), aliasing occurs above 64.8 MHz or 32.4 MHz, respectively.
 You may also find aliases at the sampling rate - broadcast frequency,
-i.e., between (129.6 - 108) = 21.6 MHz and (129.6 - 88) = 41.6 MHz..
+i.e., between <span class="math notranslate nohighlight">\((129.6 - 108) = 21.6 MHz\)</span> and <span class="math notranslate nohighlight">\((129.6 - 88) = 41.6 MHz\)</span>.
 Filtering, shielding, and adjusting gain are the primary ways to mitigate these unwanted effects.</p>
 </section>
 </section>
