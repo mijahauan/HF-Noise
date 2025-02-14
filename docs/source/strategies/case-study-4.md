@@ -4,6 +4,14 @@
 - Wavy noise peaks appear every 1.8 MHz, gradually decreasing in amplitude up to 9 MHz.
 - The pattern is consistent but changes when unplugging a certain device.
 
+![1.8 MHz multiples](../pics/test-image.png)
+```{image} ../pics/test-image.png
+```
+<video width="640" height="480" controls>
+  <source src="../pics/1.8MHz_multiples.mov" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
+
 ## Analysis:
 - This pattern suggests harmonics of a switching power supply.
 - Many cheap wall warts, LED drivers, and computer chargers generate harmonic noise.

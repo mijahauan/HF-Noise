@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'RTD-test'
+project = 'HF-Noise'
 copyright = '2025, Michael James Hauan'
 author = 'Michael James Hauan'
-release = '0.0.1'
+release = '0.0.1-alpha'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -24,6 +24,7 @@ extensions = [
 
 myst_enable_extensions = [
     "amsmath",  # Enables AMS-style math environments like align
+    "html_image",
 ]
 
 templates_path = ['_templates']

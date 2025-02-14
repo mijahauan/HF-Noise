@@ -1,6 +1,6 @@
 # HF Noise Mitigation Guide
 
-Welcome to the HF Noise Mitigation documentation. This guide helps identify and mitigate near-field high-frequency noise sources that interfere with HF signal reception.
+Welcome to the HF Noise Mitigation documentation to help identify and mitigate noise that interfere with HF signal reception.
 
 ```{toctree}
 :maxdepth: 2
@@ -11,6 +11,7 @@ basics/man-made-noise.md
 basics/receiver-station-noise.md
 basics/digital-communication-noise.md
 basics/common-sources.md
+basics/other-noise-terms.md
 ```
 
 ```{toctree}
