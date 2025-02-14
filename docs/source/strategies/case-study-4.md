@@ -2,9 +2,13 @@
 
 ## Symptom:
 - Wavy noise peaks appear every 1.8 MHz, gradually decreasing in amplitude up to 9 MHz.
-- The pattern is consistent but changes when unplugging a certain device.
 
-![1.8 MHz multiples](../_images/multiples_1.8MHz.png)
+![](../_images/multiples_1.8MHz.png)
+
+- The pattern also appears on another antenna/receive system at the same site.
+
+![](../_images/multiples_1.8MHz-2.png)
+
 
 ## Analysis:
 - This pattern suggests harmonics of a switching power supply.
