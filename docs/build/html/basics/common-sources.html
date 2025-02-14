@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tools" href="../diagnostics/tools.html" />
-    <link rel="prev" title="Noise Categories" href="noise-categories.html" /> 
+    <link rel="next" title="Noise Detection Tools" href="../diagnostics/noise-detection-tools.html" />
+    <link rel="prev" title="Digital &amp; Communication-Related Noise" href="digital-communication-noise.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,8 +44,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="noise-categories.html">Noise Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="natural-noise.html">Natural Noise Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man-made-noise.html">Man-Made Noise (Electromagnetic Pollution)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html">Receiver &amp; Station-Generated Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html#thermal-noise">Thermal Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html#common-mode-current-noise">Common Mode Current Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="receiver-station-noise.html#intermodulation-mixing-products">Intermodulation &amp; Mixing Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digital-communication-noise.html#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digital-communication-noise.html#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Common HF Noise Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#power-line-noise"><strong>Power Line Noise</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#switched-mode-power-supplies"><strong>Switched-mode Power Supplies</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#led-lighting"><strong>LED Lighting</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#solar-inverters"><strong>Solar Inverters</strong></a></li>
@@ -55,11 +64,28 @@
 <li class="toctree-l2"><a class="reference internal" href="#timing-signals-from-gpsdos"><strong>Timing Signals from GPSDOs</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/tools.html"><strong>Tools</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/techniques.html"><strong>Techniques</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/use-cases.html"><strong>Use Cases and Decision Trees</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/structure.html"><strong>Suggested Document Structure</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/notes.html"><strong>Further Notes and Suggestions</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-detection-tools.html">Noise Detection Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/identification-mitigation-strategies.html">General Identification &amp; Mitigation Strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-1.html">Case Study 1: Waterfall Changes When Moving a Feedline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-2.html">Case Study 2: 60Hz Humming Noise on Certain Frequencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../resources/external-links.html">External Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/miscellaneous-notes.html">Miscellaneous Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/contributors.html">Contributors</a></li>
 </ul>
 
         </div>
@@ -88,7 +114,8 @@
              
   <section id="common-hf-noise-sources">
 <h1>Common HF Noise Sources<a class="headerlink" href="#common-hf-noise-sources" title="Link to this heading"></a></h1>
-<p>##<strong>Power Line Noise</strong></p>
+<section id="power-line-noise">
+<h2><strong>Power Line Noise</strong><a class="headerlink" href="#power-line-noise" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>Cause:</strong> Faulty insulators, corona discharge, or arcing connections.</p></li>
 <li><p><strong>Appearance on Spectrum Display:</strong></p>
@@ -105,6 +132,7 @@
 </ul>
 </li>
 </ul>
+</section>
 <section id="switched-mode-power-supplies">
 <h2><strong>Switched-mode Power Supplies</strong><a class="headerlink" href="#switched-mode-power-supplies" title="Link to this heading"></a></h2>
 <ul>
@@ -241,8 +269,8 @@ From Glenn Elmore N6GN:
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="noise-categories.html" class="btn btn-neutral float-left" title="Noise Categories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../diagnostics/tools.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="digital-communication-noise.html" class="btn btn-neutral float-left" title="Digital &amp; Communication-Related Noise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../diagnostics/noise-detection-tools.html" class="btn btn-neutral float-right" title="Noise Detection Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

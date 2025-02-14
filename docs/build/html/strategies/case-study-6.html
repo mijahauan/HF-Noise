@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Suspected FM Broadcast Station Interference &mdash; RTD-test 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="External Links" href="../resources/external-links.html" />
+    <link rel="prev" title="Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict" href="case-study-5.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RTD-test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/natural-noise.html">Natural Noise Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/man-made-noise.html">Man-Made Noise (Electromagnetic Pollution)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/receiver-station-noise.html">Receiver &amp; Station-Generated Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/receiver-station-noise.html#thermal-noise">Thermal Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/receiver-station-noise.html#common-mode-current-noise">Common Mode Current Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/receiver-station-noise.html#intermodulation-mixing-products">Intermodulation &amp; Mixing Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/common-sources.html">Common HF Noise Sources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-detection-tools.html">Noise Detection Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="identification-mitigation-strategies.html">General Identification &amp; Mitigation Strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-1.html">Case Study 1: Waterfall Changes When Moving a Feedline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-2.html">Case Study 2: 60Hz Humming Noise on Certain Frequencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Case Study: Suspected FM Broadcast Station Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#symptom">Symptom:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-identify-artifacts-from-fm-broadcast-stations">Step 1: Identify Artifacts from FM Broadcast Stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior">Step 2: Investigate the SDR’s Sampling Rate and Front-End Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-verify-the-fm-source">Step 3: Verify the FM Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-mitigation-techniques">Step 4: Mitigation Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../resources/external-links.html">External Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/miscellaneous-notes.html">Miscellaneous Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/contributors.html">Contributors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RTD-test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Case Study: Suspected FM Broadcast Station Interference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/strategies/case-study-6.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="case-study-suspected-fm-broadcast-station-interference">
+<h1>Case Study: Suspected FM Broadcast Station Interference<a class="headerlink" href="#case-study-suspected-fm-broadcast-station-interference" title="Link to this heading"></a></h1>
+<section id="symptom">
+<h2>Symptom:<a class="headerlink" href="#symptom" title="Link to this heading"></a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Unusual spikes or patterns appear on the spectrum display at unexpected frequencies, often in the VHF range (above 30 MHz) but sometimes in HF bands as well.
+•	The artifacts increase in intensity when pointing a directional antenna toward a known FM broadcast tower.
+•	The SDR’s front-end overloads, causing broad, unpredictable interference across the spectrum.
+</pre></div>
+</div>
+</section>
+<section id="step-1-identify-artifacts-from-fm-broadcast-stations">
+<h2>Step 1: Identify Artifacts from FM Broadcast Stations<a class="headerlink" href="#step-1-identify-artifacts-from-fm-broadcast-stations" title="Link to this heading"></a></h2>
+<p>FM broadcast stations operate in the 88–108 MHz range and are high-power transmitters (often tens or hundreds of kilowatts ERP). If they are interfering with your SDR, you might observe:
+•	Harmonics &amp; Mixing Products
+•	Some FM transmitters generate harmonics, appearing at multiples of their fundamental frequency (e.g., a 100 MHz station producing harmonics at 200, 300 MHz).
+•	If your SDR has weak front-end filtering, mixing products from FM stations can appear in unexpected places.
+•	Intermodulation Distortion (IMD)
+•	If multiple FM stations are strong at your location, their signals can mix inside the SDR or a nearby nonlinear junction (e.g., corroded metal connections), generating sum and difference frequencies that may appear in the HF spectrum.
+•	Example: Two FM stations at 88.5 MHz and 99.5 MHz could produce an intermodulation product at:</p>
+<p>99.5 - 88.5 = 11 \text{ MHz}  \quad \text{(inside HF range)}</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	Aliasing (Due to SDR Sampling Rate Limits)
+•	If the sampling rate of your SDR is lower than twice the frequency of incoming signals (Nyquist criterion violation), FM signals may “fold over” into your spectrum.
+•	Example: If your SDR has a 2.048 MSPS sampling rate, any signal above 1.024 MHz (half the sampling rate) may alias into the displayed spectrum.
+</pre></div>
+</div>
+</section>
+<section id="step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior">
+<h2>Step 2: Investigate the SDR’s Sampling Rate and Front-End Behavior<a class="headerlink" href="#step-2-investigate-the-sdrs-sampling-rate-and-front-end-behavior" title="Link to this heading"></a></h2>
+<p>Knowing the sampling rate helps predict aliasing behavior.
+•	Wideband SDRs Have Higher Nyquist Limits
+•	Airspy HF+ Discovery (6.144 MSPS): Aliasing above 3.072 MHz.
+•	SDRplay RSPdx (10 MSPS): Aliasing above 5 MHz.
+•	HackRF One (20 MSPS): Aliasing above 10 MHz.
+•	LimeSDR Mini (30.72 MSPS): Aliasing above 15.36 MHz.
+•	LimeSDR USB (61.44 MSPS): Aliasing above 30.72 MHz.
+•	Ettus USRP B210 (up to 61.44 MSPS): Aliasing above 30.72 MHz.
+•	Ettus USRP X310 (up to 129.6 MSPS): Aliasing above 64.8 MHz.
+•	RX888 (64.8 or 129.6 MSPS)
+•	Check for Aliasing Boundaries
+•	If you are running a 64.8 MSPS SDR, expect aliasing from signals above 32.4 MHz to fold back into your spectrum.
+•	If FM broadcast signals (88–108 MHz) alias into your HF display, the sampling rate is likely too low, or strong signals are overloading the SDR front end.
+•	Check for Front-End Overload
+•	Some SDRs lack front-end band-pass filtering, allowing strong local FM signals to cause desensitization or intermodulation distortion across the spectrum.
+•	Try reducing gain settings in your SDR software to see if the artifacts reduce.</p>
+</section>
+<section id="step-3-verify-the-fm-source">
+<h2>Step 3: Verify the FM Source<a class="headerlink" href="#step-3-verify-the-fm-source" title="Link to this heading"></a></h2>
+<p>To confirm that local FM stations are the problem:
+1.	Use a Band-Pass Filter for HF
+•	Insert a high-pass or band-pass filter before the SDR to block VHF signals from reaching the front end.
+•	If FM interference disappears, it was likely front-end overload.
+2.	Listen in WFM Mode
+•	Tune your SDR to 88–108 MHz and listen in wideband FM mode.
+•	Identify strong signals and note the most powerful stations.
+3.	Check for Mix Products Using a Second SDR
+•	If you have another receiver, use it to check if the same artifacts appear.
+•	If only one receiver is affected, the issue is likely internal to that SDR (aliasing, overload, or poor filtering).</p>
+</section>
+<section id="step-4-mitigation-techniques">
+<h2>Step 4: Mitigation Techniques<a class="headerlink" href="#step-4-mitigation-techniques" title="Link to this heading"></a></h2>
+<p>Once you confirm that FM broadcast stations are interfering, try the following solutions:
+1.	Use a Broadcast Band Notch Filter
+•	A notch filter for 88–108 MHz can prevent FM signals from overloading the SDR.
+•	These are available as commercial filters (e.g., RTL-SDR Blog FM Notch, Nooelec Flamingo+ FM) or DIY tuned circuits.
+2.	Reduce SDR Gain
+•	Lowering gain settings can reduce overload distortion without significantly affecting HF signals.
+3.	Use a Better Antenna Setup
+•	If using an active preamp, place an FM trap filter before the amplifier.
+•	Reorient antennas to minimize pickup of nearby broadcast stations.
+4.	Improve SDR Shielding
+•	Some SDRs (like cheap RTL-SDR dongles) lack proper shielding, allowing strong RF to leak into the circuit.
+•	Using a metal enclosure or a better-shielded SDR (e.g., Airspy HF+, SDRplay RSPdx) can help.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>By knowing your SDR’s sampling rate, gain settings, and front-end behavior, you can determine whether FM signals are causing harmonics, mixing products, intermodulation, or aliasing.
+For wideband SDRs like the RX888 (129.6 MSPS or 64.8 MSPS), aliasing occurs above 64.8 MHz or 32.4 MHz, respectively.
+You may also find aliases at the sampling rate - broadcast frequency,
+i.e., between (129.6 - 108) = 21.6 MHz and (129.6 - 88) = 41.6 MHz..
+Filtering, shielding, and adjusting gain are the primary ways to mitigate these unwanted effects.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="case-study-5.html" class="btn btn-neutral float-left" title="Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../resources/external-links.html" class="btn btn-neutral float-right" title="External Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Michael James Hauan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

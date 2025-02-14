@@ -33,6 +33,7 @@ strategies/case-study-2.md
 strategies/case-study-3.md
 strategies/case-study-4.md
 strategies/case-study-5.md
+strategies/case-study-6.md
 ```
 
 ```{toctree}

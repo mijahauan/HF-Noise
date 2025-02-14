@@ -1,6 +1,7 @@
+
 # Common HF Noise Sources
 
-##**Power Line Noise**
+## **Power Line Noise**
 
 - **Cause:** Faulty insulators, corona discharge, or arcing connections.
     
