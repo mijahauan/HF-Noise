@@ -1,0 +1,16 @@
+# **Suggested Document Structure**
+
+1. **Introduction:** Purpose and tools required.
+    
+2. **Noise Categories:** Radiated noise vs. ground loops.
+    
+3. **Common Noise Sources:** Detailed descriptions, diagnostics, and mitigations.
+    
+4. **Diagnostic Techniques:** Methods and tools for effective troubleshooting.
+    
+5. **Use Cases and Decision Trees:** Practical examples for applying techniques.
+    
+6. **Mitigation Strategies:** Comprehensive solutions tailored to each noise type.
+	   
+7.  **Examples:**
+

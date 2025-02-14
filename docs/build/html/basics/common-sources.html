@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Common HF Noise Sources &mdash; RTD-test 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tools" href="../diagnostics/tools.html" />
+    <link rel="prev" title="Noise Categories" href="noise-categories.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RTD-test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="noise-categories.html">Noise Categories</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common HF Noise Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#switched-mode-power-supplies"><strong>Switched-mode Power Supplies</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#led-lighting"><strong>LED Lighting</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#solar-inverters"><strong>Solar Inverters</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#computers-and-peripherals"><strong>Computers and Peripherals</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cable-tv-systems"><strong>Cable TV Systems</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-neighboring-devices"><strong>Other Neighboring Devices</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timing-signals-from-gpsdos"><strong>Timing Signals from GPSDOs</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/tools.html"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/techniques.html"><strong>Techniques</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/use-cases.html"><strong>Use Cases and Decision Trees</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/structure.html"><strong>Suggested Document Structure</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/notes.html"><strong>Further Notes and Suggestions</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RTD-test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Common HF Noise Sources</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/basics/common-sources.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="common-hf-noise-sources">
+<h1>Common HF Noise Sources<a class="headerlink" href="#common-hf-noise-sources" title="Link to this heading"></a></h1>
+<p>##<strong>Power Line Noise</strong></p>
+<ul class="simple">
+<li><p><strong>Cause:</strong> Faulty insulators, corona discharge, or arcing connections.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Series of harmonics spaced at 60 Hz (or 50 Hz) intervals.</p></li>
+<li><p>Wide spikes or comb patterns.</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> Buzzing or crackling.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Identify offending power poles with a directional antenna.</p></li>
+<li><p>Report to the utility company for repairs.</p></li>
+</ul>
+</li>
+</ul>
+<section id="switched-mode-power-supplies">
+<h2><strong>Switched-mode Power Supplies</strong><a class="headerlink" href="#switched-mode-power-supplies" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Cause:</strong> Common in chargers, LED drivers, and other devices.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul class="simple">
+<li><p>Wideband noise, often with harmonic spikes.</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> High-pitched whine or rough buzz.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul class="simple">
+<li><p>Replace noisy power supplies with linear ones.</p></li>
+<li><p>Use ferrite chokes on cables.</p></li>
+</ul>
+</li>
+<li><p><strong>Notes:</strong>
+From Glenn Elmore N6GN:
+“Families of powerline frequency spaced spurs and hum/growl in a <strong>broadband AM detector</strong> is most likely NOT “powerline harmonics” per se.  I find it to be a very useful tool for detecting SMPS related ingress but not simple N*60 Hz.</p>
+<p>What I often see is SMPS with poorly filtered DC (one capacitor after a couple of rectifiers) supply “DC” to run a usually-bipolar SMPS.  Those switched edges are very fast and can generate to HF and beyond.  It isn’t always obvious in a USB BW on, say 20m, that this is what your noise is from, it may not sound that different to you, but often in a <strong>wide AM detector</strong>, all the individual lines that are themselves pretty mush and spread, add coherently such that residual 60/120 Hz on the SMPS’s sourcing supply becomes obvious.”</p>
+</li>
+</ul>
+</section>
+<section id="led-lighting">
+<h2><strong>LED Lighting</strong><a class="headerlink" href="#led-lighting" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Cause:</strong> Poorly designed LED drivers.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Narrowband or wideband noise.</p></li>
+<li><p>Harmonics can sometimes be seen.</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> Squealing or periodic buzzing.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Replace bulbs with RF-quiet designs.</p></li>
+<li><p>Use ferrite chokes.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="solar-inverters">
+<h2><strong>Solar Inverters</strong><a class="headerlink" href="#solar-inverters" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Cause:</strong> Inverters for solar panel systems.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Harmonics or broadband interference.</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> Buzz or periodic tones.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Contact the manufacturer for filtering solutions.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="computers-and-peripherals">
+<h2><strong>Computers and Peripherals</strong><a class="headerlink" href="#computers-and-peripherals" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Cause:</strong> Internal switching power supplies, data buses.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Broadband noise with harmonic peaks.</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> High-pitched digital hash.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Add shielding.</p></li>
+<li><p>Use ferrite cores on cables.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cable-tv-systems">
+<h2><strong>Cable TV Systems</strong><a class="headerlink" href="#cable-tv-systems" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Cause:</strong> Poor shielding on cables or connectors.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Strong carriers at specific frequencies (e.g., 50-60 MHz).</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> Pure tones or carriers.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Replace or re-terminate cables with proper shielding.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="other-neighboring-devices">
+<h2><strong>Other Neighboring Devices</strong><a class="headerlink" href="#other-neighboring-devices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Examples:</strong> Wi-Fi, baby monitors, wireless security systems.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Discrete carriers or periodic bursts.</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> Pulsed tones or hash.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Negotiate frequency adjustments or use filtering.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="timing-signals-from-gpsdos">
+<h2><strong>Timing Signals from GPSDOs</strong><a class="headerlink" href="#timing-signals-from-gpsdos" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Cause:</strong> Timing signals generated by GPS-disciplined oscillators (GPSDOs) leaking into nearby equipment.</p></li>
+<li><p><strong>Appearance on Spectrum Display:</strong></p>
+<ul>
+<li><p>Regular, narrowband carriers or harmonics, often at known reference frequencies (e.g., 10 MHz).</p></li>
+</ul>
+</li>
+<li><p><strong>Sound:</strong> Stable tones or periodic bursts.</p></li>
+<li><p><strong>Mitigation:</strong></p>
+<ul>
+<li><p>Shield the GPSDO enclosure.</p></li>
+<li><p>Use high-quality coaxial cables and connectors.</p></li>
+<li><p>Apply ferrite chokes to all connecting cables.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="noise-categories.html" class="btn btn-neutral float-left" title="Noise Categories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../diagnostics/tools.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Michael James Hauan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

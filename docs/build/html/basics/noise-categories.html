@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noise Categories &mdash; RTD-test 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common HF Noise Sources" href="common-sources.html" />
+    <link rel="prev" title="HF Noise Mitigation Guide" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RTD-test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Noise Categories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#radiated-noise">Radiated Noise</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mechanism">Mechanism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#characteristics">Characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tools-for-diagnosis">Tools for Diagnosis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mitigation-techniques">Mitigation Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#noise-due-to-ground-loops">Noise Due to Ground Loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Mechanism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Tools for Diagnosis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Mitigation Techniques</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common-sources.html">Common HF Noise Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/tools.html"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/techniques.html"><strong>Techniques</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/use-cases.html"><strong>Use Cases and Decision Trees</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/structure.html"><strong>Suggested Document Structure</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/notes.html"><strong>Further Notes and Suggestions</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RTD-test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Noise Categories</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/basics/noise-categories.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="noise-categories">
+<h1>Noise Categories<a class="headerlink" href="#noise-categories" title="Link to this heading"></a></h1>
+<section id="radiated-noise">
+<h2>Radiated Noise<a class="headerlink" href="#radiated-noise" title="Link to this heading"></a></h2>
+<section id="mechanism">
+<h3>Mechanism<a class="headerlink" href="#mechanism" title="Link to this heading"></a></h3>
+<p>Noise emitted through the air from a source and coupled directly into an antenna or receiver.</p>
+</section>
+<section id="characteristics">
+<h3>Characteristics<a class="headerlink" href="#characteristics" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Frequency-dependent</p></li>
+<li><p>Changes with antenna orientation and location</p></li>
+<li><p>Typically diminishes with distance from the source</p></li>
+</ul>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Switched-mode power supplies (SMPS)</p></li>
+<li><p>LED drivers</p></li>
+<li><p>Solar inverters</p></li>
+</ul>
+</section>
+<section id="tools-for-diagnosis">
+<h3>Tools for Diagnosis<a class="headerlink" href="#tools-for-diagnosis" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Directional antennas (e.g., small loop antenna)</p></li>
+<li><p>Spectrum analyzer</p></li>
+<li><p>Portable AM radio</p></li>
+</ul>
+</section>
+<section id="mitigation-techniques">
+<h3>Mitigation Techniques<a class="headerlink" href="#mitigation-techniques" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Improve shielding of noisy devices</p></li>
+<li><p>Use ferrite chokes on power and signal cables</p></li>
+<li><p>Replace noisy devices with RF-quiet alternatives</p></li>
+</ul>
+</section>
+</section>
+<section id="noise-due-to-ground-loops">
+<h2>Noise Due to Ground Loops<a class="headerlink" href="#noise-due-to-ground-loops" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Mechanism<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Circulating currents caused by differences in ground potential between connected devices.</p>
+</section>
+<section id="id2">
+<h3>Characteristics<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Frequency-independent or low-frequency hum, sometimes modulating HF signals</p></li>
+<li><p>Independent of antenna movement or reorientation</p></li>
+<li><p>Strongly influenced by physical connections and layout</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Examples<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Poorly grounded systems</p></li>
+<li><p>Multiple grounding points with potential differences</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Tools for Diagnosis<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Multimeter or oscilloscope to measure ground potential differences</p></li>
+<li><p>Isolation tests by disconnecting components</p></li>
+<li><p>Temporary use of battery power</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Mitigation Techniques<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Ensure a single, low-impedance grounding point</p></li>
+<li><p>Use isolation transformers</p></li>
+<li><p>Install balanced audio or RF isolators</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="HF Noise Mitigation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="common-sources.html" class="btn btn-neutral float-right" title="Common HF Noise Sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Michael James Hauan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RTD-test documentation &mdash; RTD-test 0.0.1 documentation</title>
+  <title>HF Noise Mitigation Guide &mdash; RTD-test 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="Natural Noise Sources" href="basics/natural-noise.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,10 +41,40 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/natural-noise.html">Natural Noise Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/man-made-noise.html">Man-Made Noise (Electromagnetic Pollution)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html">Receiver &amp; Station-Generated Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html#thermal-noise">Thermal Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html#common-mode-current-noise">Common Mode Current Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html#intermodulation-mixing-products">Intermodulation &amp; Mixing Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/digital-communication-noise.html#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/digital-communication-noise.html#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/common-sources.html">Common HF Noise Sources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-detection-tools.html">Noise Detection Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="strategies/identification-mitigation-strategies.html">General Identification &amp; Mitigation Strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-1.html">Case Study 1: Waterfall Changes When Moving a Feedline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-2.html">Case Study 2: 60Hz Humming Noise on Certain Frequencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resources/external-links.html">External Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/miscellaneous-notes.html">Miscellaneous Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/contributors.html">Contributors</a></li>
 </ul>
 
         </div>
@@ -61,9 +91,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">RTD-test documentation</li>
+      <li class="breadcrumb-item active">HF Noise Mitigation Guide</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -71,23 +101,122 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="rtd-test-documentation">
-<h1>RTD-test documentation<a class="headerlink" href="#rtd-test-documentation" title="Link to this heading"></a></h1>
-<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
-<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
-documentation for details.</p>
+  <section id="hf-noise-mitigation-guide">
+<h1>HF Noise Mitigation Guide<a class="headerlink" href="#hf-noise-mitigation-guide" title="Link to this heading"></a></h1>
+<p>Welcome to the HF Noise Mitigation documentation. This guide helps identify and mitigate near-field high-frequency noise sources that interfere with HF signal reception.</p>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#about-the-project">About the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/natural-noise.html">Natural Noise Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/natural-noise.html#atmospheric-noise-static">Atmospheric Noise (Static)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/natural-noise.html#ionospheric-noise-effects">Ionospheric Noise &amp; Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/natural-noise.html#galactic-noise">Galactic Noise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#default-installation">default installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#added-markdown-capability">added markdown capability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/man-made-noise.html">Man-Made Noise (Electromagnetic Pollution)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/man-made-noise.html#power-line-noise">Power Line Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/man-made-noise.html#switching-power-supply-noise">Switching Power Supply Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/man-made-noise.html#industrial-consumer-electronics-interference">Industrial &amp; Consumer Electronics Interference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/man-made-noise.html#solar-panel-inverter-noise">Solar Panel &amp; Inverter Noise</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html">Receiver &amp; Station-Generated Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html#thermal-noise">Thermal Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html#common-mode-current-noise">Common Mode Current Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/receiver-station-noise.html#intermodulation-mixing-products">Intermodulation &amp; Mixing Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/digital-communication-noise.html#broadband-data-emissions-plc-dsl-ethernet">Broadband Data Emissions (PLC, DSL, Ethernet)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/digital-communication-noise.html#switching-digital-logic-noise">Switching Digital Logic Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/common-sources.html">Common HF Noise Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#switched-mode-power-supplies"><strong>Switched-mode Power Supplies</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#led-lighting"><strong>LED Lighting</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#solar-inverters"><strong>Solar Inverters</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#computers-and-peripherals"><strong>Computers and Peripherals</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#cable-tv-systems"><strong>Cable TV Systems</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#other-neighboring-devices"><strong>Other Neighboring Devices</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics/common-sources.html#timing-signals-from-gpsdos"><strong>Timing Signals from GPSDOs</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-detection-tools.html">Noise Detection Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-detection-tools.html#software-defined-radios-sdrs">Software-Defined Radios (SDRs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-detection-tools.html#analog-receivers-am-ssb-cw-capable-radios">Analog Receivers (AM, SSB, CW-capable radios)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-detection-tools.html#oscilloscope-with-fft-fast-fourier-transform-capability">Oscilloscope with FFT (Fast Fourier Transform) Capability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-measurement-tools.html#spectrum-analyzers">Spectrum Analyzers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-measurement-tools.html#field-strength-meters">Field Strength Meters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-measurement-tools.html#current-probes-rf-clamp-meters">Current Probes &amp; RF Clamp Meters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#direction-finding-methods">Direction-Finding Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#noise-hunting-with-portable-receivers">Noise-Hunting with Portable Receivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#controlled-power-down-testing">Controlled Power-Down Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#conducted-vs-radiated-noise-testing">Conducted vs. Radiated Noise Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#ferrite-chokes-toroids">Ferrite Chokes &amp; Toroids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#common-mode-chokes">Common-Mode Chokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#shielding-filtering">Shielding &amp; Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#antenna-placement-orientation">Antenna Placement &amp; Orientation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="strategies/identification-mitigation-strategies.html">General Identification &amp; Mitigation Strategies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strategies/identification-mitigation-strategies.html#identifying-rf-noise">Identifying RF Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/identification-mitigation-strategies.html#mitigation-strategies">Mitigation Strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/identification-mitigation-strategies.html#a-layered-approach-works-best">A layered approach works best:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-1.html">Case Study 1: Waterfall Changes When Moving a Feedline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-1.html#symptom">Symptom:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-1.html#analysis">Analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-1.html#mitigation-steps">Mitigation Steps:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-2.html">Case Study 2: 60Hz Humming Noise on Certain Frequencies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-2.html#symptom">Symptom:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-2.html#analysis">Analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-2.html#mitigation-steps">Mitigation Steps:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-3.html#symptom">Symptom:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-3.html#analysis">Analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-3.html#mitigation-steps">Mitigation Steps:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-4.html#symptom">Symptom:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-4.html#analysis">Analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-4.html#mitigation-steps">Mitigation Steps:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="strategies/case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-5.html#symptom">Symptom:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-5.html#analysis">Analysis:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strategies/case-study-5.html#mitigation-steps">Mitigation Steps:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resources/external-links.html">External Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/miscellaneous-notes.html">Miscellaneous Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/contributors.html">Contributors</a></li>
 </ul>
 </div>
 </section>
@@ -96,7 +225,7 @@ documentation for details.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="basics/natural-noise.html" class="btn btn-neutral float-right" title="Natural Noise Sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
