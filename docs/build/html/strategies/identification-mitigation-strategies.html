@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/common-sources.html">Common HF Noise Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/other-noise-terms.html">Other Basic Noise Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/definitions.html">Important Definitions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
 <ul>
@@ -128,6 +129,17 @@
 <li><p>Harmonic patterns: Repeating peaks at regular frequency intervals.</p></li>
 <li><p>Time-variable noise: Noise that changes when equipment cycles on/off.</p></li>
 </ul>
+<p><img alt="" src="../_images/FM_incursion.png" /></p>
+<p>Note the huge, broad signal at 28.1 MHz, spreading across the 10m band.  Subtracting that from the RX888’s 129.6 MHz sampling frequency leaves 101.5 MHz, the broadcast frequency of local FM station, KPLA.</p>
+<p><img alt="" src="../_images/multiple_FM.png" /></p>
+<ul class="simple">
+<li><p>28.1 MHz &lt;– 101.5 FM</p></li>
+<li><p>32.9 MHz &lt;–  96.7 FM</p></li>
+<li><p>37.5 MHz &lt;–  93.9 FM</p></li>
+<li><p>38.3 MHz &lt;–  91.3 FM</p></li>
+<li><p>40.1 MHz &lt;–  89.5 FM</p></li>
+<li><p>40.7 MHz &lt;–  88.9 FM</p></li>
+</ul>
 </section>
 <section id="audible-clues-am-ssb-cw-listening">
 <h3>Audible Clues (AM/SSB/CW Listening)<a class="headerlink" href="#audible-clues-am-ssb-cw-listening" title="Link to this heading"></a></h3>
@@ -146,8 +158,6 @@
 <li><p>Directional changes? Use a loop or Yagi to pinpoint sources.</p></li>
 <li><p>Not affected by power cycling? Could be an external source like power lines.</p></li>
 </ul>
-<p><img alt="" src="../_images/FM_incursion.png" /></p>
-<p>Note the huge, broad signal at 28.1 MHz, spreading across the 10m band.  Subtracting that from the RX888’s 129.6 MHz sampling frequency leaves 101.5 MHz, the broadcast frequency of local FM station, KPLA.</p>
 </section>
 </section>
 <section id="mitigation-strategies">

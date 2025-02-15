@@ -69,4 +69,4 @@ The ITU catalogues these noise levels in standardized tables to help engineers a
 
 ![](../_images/ITU_noise.png)
 
-The origin of the y-axis units corresponds to -174 dBm. So the mean noise power in a "quiet rural" area at 3 MHz converts to {math}`-174 + 40 = -134 dBm`, about the same as the noise power in a "city" at 20 MHz.  
+The origin of the y-axis units corresponds to -174 dBm. So the mean noise power in a "quiet rural" area at 3 MHz converts to {math}`-174 + 40 = -134\ dBm`, about the same as the noise power in a "city" at 20 MHz.  
