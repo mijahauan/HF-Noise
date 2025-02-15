@@ -11,7 +11,17 @@ The antenna factor (AF) is the ratio of the electric field strength E (in volts 
 
 {math}`Antenna\ Factor (AF) = \frac{E(V/m)}{V(V)}`
 
-Antenna factor is used in electromagnetic field measurements to convert the received voltage to the actual field strength of the electromagnetic wave. A smaller antenna factor corresponds to better sensitivity to electromagnetic fields.
+Key points about antenna factors:
+
+1. **Frequency Dependence:** Antenna factor varies with frequency.  A calibration chart or data table usually accompanies a measurement antenna, providing the antenna factor at discrete frequencies.
+
+2. **Calibration:** Accurate antenna-factor data comes from laboratory calibration placing the antenna in a known field and measuring the output voltage across a frequency range.
+
+3. **Application in EMC/EMI Testing:** During radiated emissions testing, the measured voltage on a calibrated instrument indicates the field strength (in dBµV/m or V/m) by applying the appropriate antenna factor (and accounting for any cable loss or amplifier gain, if applicable).
+
+4. **Units:** Antenna factors expressed in dB form can simplify calculations.  For instance, an antenna factor expressed in dB(1/m) (decibels referenced to 1 per meter) relates field strength to voltage measurements in dBµV or dBm by simple decibel arithmetic.
+
+Overall, the antenna factor quantifies the relation between “what the antenna is measuring” (a voltage) and “what we want to know” (the field strength in V/m or another appropriate unit).
 
 ## Noise Factor
 
@@ -56,3 +66,7 @@ Man-Made Noise: Noise from human-made sources like industrial machines, power li
 Galactic Noise: Noise originating from space, particularly from stars and the Milky Way.
 Thermal Noise: Noise inherent to the system due to random motion of electrons, dependent on temperature.
 The ITU catalogues these noise levels in standardized tables to help engineers account for external noise contributions across specific operational frequencies.
+
+![](../_images/ITU_noise.png)
+
+The origin of the y-axis units corresponds to -174 dBm. So the mean noise power in a "quiet rural" area at 3 MHz converts to {math}`-174 + 40 = -134 dBm`, about the same as the noise power in a "city" at 20 MHz.  

@@ -119,7 +119,14 @@
 <h2>Antenna Factor<a class="headerlink" href="#antenna-factor" title="Link to this heading"></a></h2>
 <p>The antenna factor (AF) is the ratio of the electric field strength E (in volts per meter, or V/m) at the location of the antenna to the voltage V (in volts, or V) that the antenna delivers to its output terminals. It is typically expressed in dB/m and is given by:</p>
 <p><span class="math notranslate nohighlight">\(Antenna\ Factor (AF) = \frac{E(V/m)}{V(V)}\)</span></p>
-<p>Antenna factor is used in electromagnetic field measurements to convert the received voltage to the actual field strength of the electromagnetic wave. A smaller antenna factor corresponds to better sensitivity to electromagnetic fields.</p>
+<p>Key points about antenna factors:</p>
+<ol class="arabic simple">
+<li><p><strong>Frequency Dependence:</strong> Antenna factor varies with frequency.  A calibration chart or data table usually accompanies a measurement antenna, providing the antenna factor at discrete frequencies.</p></li>
+<li><p><strong>Calibration:</strong> Accurate antenna-factor data comes from laboratory calibration placing the antenna in a known field and measuring the output voltage across a frequency range.</p></li>
+<li><p><strong>Application in EMC/EMI Testing:</strong> During radiated emissions testing, the measured voltage on a calibrated instrument indicates the field strength (in dBµV/m or V/m) by applying the appropriate antenna factor (and accounting for any cable loss or amplifier gain, if applicable).</p></li>
+<li><p><strong>Units:</strong> Antenna factors expressed in dB form can simplify calculations.  For instance, an antenna factor expressed in dB(1/m) (decibels referenced to 1 per meter) relates field strength to voltage measurements in dBµV or dBm by simple decibel arithmetic.</p></li>
+</ol>
+<p>Overall, the antenna factor quantifies the relation between “what the antenna is measuring” (a voltage) and “what we want to know” (the field strength in V/m or another appropriate unit).</p>
 </section>
 <section id="noise-factor">
 <h2>Noise Factor<a class="headerlink" href="#noise-factor" title="Link to this heading"></a></h2>
@@ -155,6 +162,8 @@ Man-Made Noise: Noise from human-made sources like industrial machines, power li
 Galactic Noise: Noise originating from space, particularly from stars and the Milky Way.
 Thermal Noise: Noise inherent to the system due to random motion of electrons, dependent on temperature.
 The ITU catalogues these noise levels in standardized tables to help engineers account for external noise contributions across specific operational frequencies.</p>
+<p><img alt="" src="../_images/ITU_noise.png" /></p>
+<p>The origin of the y-axis units corresponds to -174 dBm. So the mean noise power in a “quiet rural” area at 3 MHz converts to <span class="math notranslate nohighlight">\(-174 + 40 = -134 dBm\)</span>, about the same as the noise power in a “city” at 20 MHz.</p>
 </section>
 </section>
 
