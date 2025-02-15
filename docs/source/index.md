@@ -12,6 +12,7 @@ basics/receiver-station-noise.md
 basics/digital-communication-noise.md
 basics/common-sources.md
 basics/other-noise-terms.md
+basics/definitions.md
 ```
 
 ```{toctree}
