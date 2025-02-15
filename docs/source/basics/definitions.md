@@ -9,7 +9,7 @@ The noise floor is the level of background noise present in a system, often expr
 
 The antenna factor (AF) is the ratio of the electric field strength E (in volts per meter, or V/m) at the location of the antenna to the voltage V (in volts, or V) that the antenna delivers to its output terminals. It is typically expressed in dB/m and is given by:
 
-{math}`Antenna Factor (AF) = \frac{E(V/m)}{V(V)}`
+{math}`Antenna\ Factor (AF) = \frac{E(V/m)}{V(V)}`
 
 Antenna factor is used in electromagnetic field measurements to convert the received voltage to the actual field strength of the electromagnetic wave. A smaller antenna factor corresponds to better sensitivity to electromagnetic fields.
 
@@ -17,7 +17,7 @@ Antenna factor is used in electromagnetic field measurements to convert the rece
 
 The noise factor (F) is a measure of the degradation of the signal-to-noise ratio (SNR) as a signal passes through a system such as an amplifier, antenna, or receiver. It is a dimensionless value (greater than 1) that quantifies how much noise the system itself adds. Mathematically, the noise factor is defined as:
 
-{math}`F = \frac{SNR at the input}{SNR at the output}`
+{math}`F = \frac{SNR\  at\ the\ input}{SNR\ at\ the\ output}`
 
 The noise factor is often expressed in decibels (dB) as the noise figure (NF):
 
@@ -42,7 +42,7 @@ F=2, the noise figure is:
 
 Dynamic range refers to the range of signal levels that a device (e.g., an SDR receiver) can process effectively, from the weakest detectable signal above the noise floor to the strongest signal without distortion or overload. It is typically expressed in decibels (dB) and is given by:
 
-{math}`Dynamic Range (dB) = Maximum Input Power (dBm) − Noise Floor (dBm)`
+{math}`Dynamic\ Range (dB) = Maximum\ Input\ Power (dBm) − Noise\ Floor (dBm)`
 
 A higher dynamic range means the system can handle both very weak and very strong signals without issues.
 A low dynamic range may result in either weak signals being lost in noise or strong signals overloading the system.
