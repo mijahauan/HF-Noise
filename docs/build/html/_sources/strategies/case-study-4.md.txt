@@ -9,8 +9,6 @@
 
 ![](../_images/multiples_1.8MHz-2.png)
 
-![](../_images/multiples_1.8MHz.m4v)
-
 <video width="640" height="480" controls>
   <source src="../_images/multiples_1.8MHz.m4v" type="video/mp4">
   Your browser does not support the video tag.
