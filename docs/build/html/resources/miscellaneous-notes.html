@@ -71,7 +71,20 @@
 <p class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="external-links.html">External Links</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Miscellaneous Notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Miscellaneous Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#from-glenn-elmore-n6gn">From Glenn Elmore N6GN:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-philip-barnard-vk7jj">From Philip Barnard VK7JJ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mains-emi-filter">mains EMI filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ethernet">ethernet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-supplies">power supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shack-s-12v-600ah-battery-bank">shack’s 12V 600AH battery bank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-grounding-point-on-shack-wall">common “grounding” point on shack wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#antennas-and-their-feedlines">antennas and their feedlines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments">comments</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
 </ul>
 
@@ -101,16 +114,91 @@
              
   <section id="miscellaneous-notes">
 <h1>Miscellaneous Notes<a class="headerlink" href="#miscellaneous-notes" title="Link to this heading"></a></h1>
-<p>From Glenn N6GN:</p>
-<blockquote>
-<div><p>“If one starts with a video+audio of the fundamental of a leaking SMPS, say a bipolar one switching at 30 kHz but having the residual imperfectly filter 120 Hz riding on the DC it is chopping, along with imprecise chop rate, it isn’t CW it’s spread with noise, say 1 kHz wide ‘bump’ at 30 kHz  so angular modulation index, beta = deviation/rate so maybe .01 or so, then shows that the chopper is essentially a frequency multiplier, I think many could understand it.   Then go up to 30 MHz and listen in FM with a 10 kHz BW.  Up there  each of the ~1000th+- harmonics in the region now has its line but because its an FM signal the deviation is now 1 MHz. Both it and neighbors within 500 kHz contribute to energy there.  There is no longer any relatively narrow bump to look at or even recognize, just spread noise due to 30 similar lines - each of which is coherently switched at exactly the same instant.</p>
+<section id="from-glenn-elmore-n6gn">
+<h2>From Glenn Elmore N6GN:<a class="headerlink" href="#from-glenn-elmore-n6gn" title="Link to this heading"></a></h2>
+<p>“If one starts with a video+audio of the fundamental of a leaking SMPS, say a bipolar one switching at 30 kHz but having the residual imperfectly filter 120 Hz riding on the DC it is chopping, along with imprecise chop rate, it isn’t CW it’s spread with noise, say 1 kHz wide ‘bump’ at 30 kHz  so angular modulation index, beta = deviation/rate so maybe .01 or so, then shows that the chopper is essentially a frequency multiplier, I think many could understand it.   Then go up to 30 MHz and listen in FM with a 10 kHz BW.  Up there  each of the ~1000th+- harmonics in the region now has its line but because its an FM signal the deviation is now 1 MHz. Both it and neighbors within 500 kHz contribute to energy there.  There is no longer any relatively narrow bump to look at or even recognize, just spread noise due to 30 similar lines - each of which is coherently switched at exactly the same instant.</p>
 <p>The result is a spread noise floor that can look flat but is actually due to the noise spectrum around the original 30 kHz line summed a whole lot of times.  It may look like noise, and someone might mistakenly think it’s normal BUT if you listen to it even in a 10 kHz wide AM BW the 120 Hz component due to the residual jumps out at you.  It isn’t necessarily noticed in SSB mode.</p>
 <p>This is a tool for discovering a noise impairment you didn’t know you had.</p>
 <p>Related to that, recognize that propagated noise, our goal, has a different characteristic from near-Gaussian or “white” noise. 75 years ago before the age of SMPS if one listened from a quiet location to 20m the propagated noise had distinctive qualities. This due to the impulse nature of the finite nature of the less-than-a-jillion T-storm strikes that contributed to it.  It sounded “crackly”. That’s not what one hears at a site that is limited by spread SMPS noise.  Until you listen (and look for diurnal variations characteristic of propagated mostly-Tstorm noise  you may not recognize the difference.</p>
 <p>If the video played AM from a SMPS fundamental and then went up to, say, the high end of HF where things are spread as described above, the 120 Hz (FW rectification) component due to the residual will show the effect and hum/buzz/growl that is its signature. Then go to KPH or some other quiet site with high diurnal variations which indicate that it is not limited by spread SMPS noise and let the viewer/listener compare the demodulated noise.</p>
-<p>Oldtime geezers will immediately get the distinction. Newer amateurs will get it when they see/hear it</p>
-<p>Try it on your own system where there is a bump visible at ~2.6 MHz. Listen to 2600 in AM mode then add a zero and listen at 26000.”</p>
-</div></blockquote>
+<p>Oldtime geezers will immediately get the distinction. Newer amateurs will get it when they see/hear it
+Try it on your own system where there is a bump visible at ~2.6 MHz. Listen to 2600 in AM mode then add a zero and listen at 26000.”</p>
+</section>
+<section id="from-philip-barnard-vk7jj">
+<h2>From Philip Barnard VK7JJ<a class="headerlink" href="#from-philip-barnard-vk7jj" title="Link to this heading"></a></h2>
+<p>Nothing revolutionary here, just evolutionary via trial and error</p>
+<section id="mains-emi-filter">
+<h3>mains EMI filter<a class="headerlink" href="#mains-emi-filter" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- a two stage EMI filter placed in metal case has outlets for all mains powered computers and were noticeably worthwhile
+- filter eg: https://www.ebay.com.au/sch/i.html?_nkw=two+stage+EMI+filter&amp;_sacat=0&amp;_from=R40&amp;_trksid=p2332490.m570.l1313
+- the same filters work nicely inline with other mains-noise injecting devices at other locations in the home
+</pre></div>
+</div>
+</section>
+<section id="ethernet">
+<h3>ethernet<a class="headerlink" href="#ethernet" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- using a router that came in a metal case and supported islanding of RX888 radiod traffic
+- all ethernet leads attach to the router via HF EMI toroids with 6 or so windings of flat ethernet cable
+- no clip on ferrites, only HF EMI toroids with 6 or so turns of all SMA joining cables
+(each extra turn through a toroid gives #turns x impedance increase)
+- typical cheap local toroids eg https://www.jaycar.com.au/l15-35x21x13mm-toroid-or-ring-cores-pack-of-2/p/LO1238
+- tubes eg https://www.jaycar.com.au/large-ferrite-suppression-sleeves-pack-of-6/p/LF1260
+</pre></div>
+</div>
+</section>
+<section id="power-supplies">
+<h3>power supplies<a class="headerlink" href="#power-supplies" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- all power supplies are home brew well filtered linear except for the mains powered computers
+- all mains powered computers are fed from a single mains EMI filter as above
+- 12V battery bank as below powers all low current 5 volt devices eg LNAs via homebrew linears
+- 5V higher current supplies are homebrew linear using low voltage multi-tapped surplus electric blanket mains transformers
+(ie. minimum AC-DC voltage differential keeps losses and heat low)
+</pre></div>
+</div>
+</section>
+<section id="shack-s-12v-600ah-battery-bank">
+<h3>shack’s 12V 600AH battery bank<a class="headerlink" href="#shack-s-12v-600ah-battery-bank" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- normally solar powered but has mains linear backup auto-switch
+- battery bank powers all 12V devices and low current 5V linear homebrew supplies
+- the PWM solar inverter has an option to switch at &lt; slow 1 second rate which is great for RFI reduction
+</pre></div>
+</div>
+</section>
+<section id="common-grounding-point-on-shack-wall">
+<h3>common “grounding” point on shack wall<a class="headerlink" href="#common-grounding-point-on-shack-wall" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- all relevant devices have their own &quot;earth&quot; or chassis wire to the grounding point
+eg. the antenna current balun&#39;s coax, cases of radios, computers didn&#39;t seem to matter
+- the grounding point&#39;s earth wire exits shack to good grounding system
+</pre></div>
+</div>
+</section>
+<section id="antennas-and-their-feedlines">
+<h3>antennas and their feedlines<a class="headerlink" href="#antennas-and-their-feedlines" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- my balanced horizontal loop antennas are noticeably less noisy than my verticals
+- my balanced feedlines are noticeably quieter than coax
+- my balanced feedlines have current baluns of multiturned coax through 6 x large ferrite tubes inside shack
+</pre></div>
+</div>
+</section>
+<section id="comments">
+<h3>comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- my RX888s radiate badly and push the shack&#39;s noise floor up noticeably and so far no complete solution has been found
+- Kiwis also radiate some sort of switching very annoyingly at the ethernet connector but are more easily suppressed with ether toroids as mentioned above
+- 8 band Kiwis with splitters to 2 x AirSpy HF+ on 60m and 12m via SparkSDR give better performance than RX888s at this location
+
+- The most rewarding improvements in reducing shack noise in descending order of magnitude have been
+	- linear power supplies
+	- preventing shack noise injection into the mains wiring and suppression of externally induced mains noise
+	- earthing and grounding layout
+	- ethernet suppression
+	
+	Note:  galvanic isolation using wideband miniature RF transformers at various points in the coax didn&#39;t do much for me.
+	DO NOT BUY the below they don&#39;t isolate either the RF or shield and in fact connect both inner and shield together DC electrically
+	eBay:  &quot;RF Double Head Mini Antenna Galvanic Isolator&quot;
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
