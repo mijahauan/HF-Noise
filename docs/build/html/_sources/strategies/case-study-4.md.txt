@@ -12,7 +12,7 @@
 ![](../_images/multiples_1.8MHz.m4v)
 
 <video width="640" height="480" controls>
-  <source src="../_images/multiples_1.8MHz.m4v" type="video/quicktime">
+  <source src="../_images/multiples_1.8MHz.m4v" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
