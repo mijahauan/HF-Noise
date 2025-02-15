@@ -19,6 +19,10 @@ A structured approach to guide case studies.
 - Directional changes? Use a loop or Yagi to pinpoint sources.
 - Not affected by power cycling? Could be an external source like power lines.
 
+![](../_images/FM_incursion.png)
+
+Note the huge, broad signal at 28.1 MHz, spreading across the 10m band.  Subtracting that from the RX888's 129.6 MHz sampling frequency leaves 101.5 MHz, the broadcast frequency of local FM station, KPLA.  
+
 ## Mitigation Strategies
 ### Shielding & Enclosures
 - Use metal cases, ferrites, and shielded cables for noisy devices.

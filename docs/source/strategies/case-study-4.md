@@ -9,6 +9,10 @@
 
 ![](../_images/multiples_1.8MHz-2.png)
 
+<video width="640" height="480" controls>
+  <source src="../_images/multiples_1.8MHz.mov" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
 
 ## Analysis:
 - This pattern suggests harmonics of a switching power supply.
