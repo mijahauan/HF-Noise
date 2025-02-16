@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noise Source Localization Techniques &mdash; HF-Noise 0.0.1-alpha documentation</title>
+  <title>Noise Source Identification Techniques &mdash; HF-Noise 0.0.1-alpha documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -18,7 +18,9 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Noise Mitigation Techniques" href="mitigation.html" />
+    <link rel="prev" title="Noise Detection and Measurement" href="detection-measurement.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,7 +52,54 @@
 <li class="toctree-l1"><a class="reference internal" href="../basics/other-noise-terms.html">Other Basic Noise Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/definitions.html">Important Definitions</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="detection-measurement.html">Noise Detection and Measurement</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Noise Source Identification Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#direction-finding-methods">Direction-Finding Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-of-directional-antennas">Use of Directional Antennas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-small-loops-yagi-antennas-ferrite-rod-antennas">Examples: Small loops, Yagi antennas, ferrite rod antennas.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#triangulation">Triangulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Usage:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#noise-hunting-with-portable-receivers">Noise-Hunting with Portable Receivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#handheld-am-radios">Handheld AM Radios</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hf-portable-receivers-e-g-tecsun-sony-models">HF Portable Receivers (e.g., Tecsun, Sony models)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Usage:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#controlled-power-down-testing">Controlled Power-Down Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sequential-power-off-technique">Sequential Power-Off Technique</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#battery-powered-operation-test">Battery-Powered Operation Test</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Usage:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conducted-vs-radiated-noise-testing">Conducted vs. Radiated Noise Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-for-conducted-noise">Check for Conducted Noise:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-for-radiated-noise">Check for Radiated Noise:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mitigation.html">Noise Mitigation Techniques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Strategies &amp; Tactics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/identification-mitigation-strategies.html">General Identification &amp; Mitigation Strategies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../strategies/case-study-1.html">Case Study 1: Waterfall Changes When Moving a Feedline</a></li>
@@ -81,7 +130,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Noise Source Localization Techniques</li>
+      <li class="breadcrumb-item active">Noise Source Identification Techniques</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/diagnostics/source-identification.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -91,9 +140,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="noise-source-localization-techniques">
-<h1>Noise Source Localization Techniques<a class="headerlink" href="#noise-source-localization-techniques" title="Link to this heading"></a></h1>
-<p>These techniques help pinpoint sources of interference, whether from external sources or within the operator’s station.</p>
+  <section id="noise-source-identification-techniques">
+<h1>Noise Source Identification Techniques<a class="headerlink" href="#noise-source-identification-techniques" title="Link to this heading"></a></h1>
+<p>These techniques help recognize and locate sources of interference, whether from external sources or within the operator’s station.</p>
 <section id="direction-finding-methods">
 <h2>Direction-Finding Methods<a class="headerlink" href="#direction-finding-methods" title="Link to this heading"></a></h2>
 <section id="use-of-directional-antennas">
@@ -187,7 +236,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="detection-measurement.html" class="btn btn-neutral float-left" title="Noise Detection and Measurement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mitigation.html" class="btn btn-neutral float-right" title="Noise Mitigation Techniques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

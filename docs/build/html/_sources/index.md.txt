@@ -26,7 +26,7 @@ diagnostics/mitigation.md
 
 ```{toctree}
 :maxdepth: 2
-:caption: Strategies and Tactics
+:caption: Strategies & Tactics
 
 strategies/identification-mitigation-strategies.md
 strategies/case-study-1.md
