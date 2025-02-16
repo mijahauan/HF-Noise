@@ -44,3 +44,4 @@ strategies/case-study-6.md
 resources/external-links.md
 resources/miscellaneous-notes.md
 resources/contributors.md
+```
