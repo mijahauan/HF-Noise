@@ -6,6 +6,8 @@
 - The artifacts increase in intensity when pointing a directional antenna toward a known FM broadcast tower.
 - The SDR’s front-end overloads, causing broad, unpredictable interference across the spectrum.
 
+![](../images/multiple_FM.png)
+
 ## Step 1: Identify Artifacts from FM Broadcast Stations
 
 ### FM broadcast stations operate in the 88–108 MHz range and are high-power transmitters (often tens or hundreds of kilowatts ERP). If they are interfering with your SDR, you might observe:

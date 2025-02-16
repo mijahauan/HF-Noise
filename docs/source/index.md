@@ -1,6 +1,6 @@
-# HF Noise Mitigation Guide
+# HF Noise Identification and Mitigation Guide
 
-Welcome to the HF Noise Mitigation documentation to help identify and mitigate noise that interfere with HF signal reception.
+Using an SDR with ka9q-radio to identify and mitigate controllable noise interfering with HF signal reception.
 
 ```{toctree}
 :maxdepth: 2
@@ -19,10 +19,9 @@ basics/definitions.md
 :maxdepth: 2
 :caption: Tools & Techniques
 
-diagnostics/noise-detection-tools.md
-diagnostics/noise-measurement-tools.md
-diagnostics/noise-source-localization.md
-diagnostics/noise-mitigation.md
+diagnostics/detection-measurement.md
+diagnostics/source-identification.md
+diagnostics/mitigation.md
 ```
 
 ```{toctree}

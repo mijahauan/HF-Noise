@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HF Noise Mitigation Guide &mdash; HF-Noise 0.0.1-alpha documentation</title>
+  <title>HF Noise Identification and Mitigation Guide &mdash; HF-Noise 0.0.1-alpha documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -54,10 +54,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-detection-tools.html">Noise Detection Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/detection-measurement.html">Noise Detection and Measurement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/source-identification.html">Noise Source Localization Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/mitigation.html">Noise Mitigation Techniques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
 <ul>
@@ -90,7 +89,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">HF Noise Mitigation Guide</li>
+      <li class="breadcrumb-item active">HF Noise Identification and Mitigation Guide</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -100,9 +99,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="hf-noise-mitigation-guide">
-<h1>HF Noise Mitigation Guide<a class="headerlink" href="#hf-noise-mitigation-guide" title="Link to this heading"></a></h1>
-<p>Welcome to the HF Noise Mitigation documentation to help identify and mitigate noise that interfere with HF signal reception.</p>
+  <section id="hf-noise-identification-and-mitigation-guide">
+<h1>HF Noise Identification and Mitigation Guide<a class="headerlink" href="#hf-noise-identification-and-mitigation-guide" title="Link to this heading"></a></h1>
+<p>Using an SDR with ka9q-radio to identify and mitigate controllable noise interfering with HF signal reception.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul>
@@ -161,30 +160,27 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-detection-tools.html">Noise Detection Tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-detection-tools.html#software-defined-radios-sdrs">Software-Defined Radios (SDRs)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-detection-tools.html#analog-receivers-am-ssb-cw-capable-radios">Analog Receivers (AM, SSB, CW-capable radios)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-detection-tools.html#oscilloscope-with-fft-fast-fourier-transform-capability">Oscilloscope with FFT (Fast Fourier Transform) Capability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/detection-measurement.html">Noise Detection and Measurement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/detection-measurement.html#software-defined-radios">Software-Defined Radios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/detection-measurement.html#analog-receivers-am-ssb-cw-capable-radios">Analog Receivers (AM, SSB, CW-capable radios)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/detection-measurement.html#oscilloscope-with-fft-fast-fourier-transform-capability">Oscilloscope with FFT (Fast Fourier Transform) Capability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/detection-measurement.html#stand-alone-spectrum-analyzers">Stand-alone Spectrum Analyzers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/detection-measurement.html#field-strength-meters">Field Strength Meters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/detection-measurement.html#current-probes-rf-clamp-meters">Current Probes &amp; RF Clamp Meters</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-measurement-tools.html#spectrum-analyzers">Spectrum Analyzers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-measurement-tools.html#field-strength-meters">Field Strength Meters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-measurement-tools.html#current-probes-rf-clamp-meters">Current Probes &amp; RF Clamp Meters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/source-identification.html">Noise Source Localization Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/source-identification.html#direction-finding-methods">Direction-Finding Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/source-identification.html#noise-hunting-with-portable-receivers">Noise-Hunting with Portable Receivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/source-identification.html#controlled-power-down-testing">Controlled Power-Down Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/source-identification.html#conducted-vs-radiated-noise-testing">Conducted vs. Radiated Noise Testing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#direction-finding-methods">Direction-Finding Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#noise-hunting-with-portable-receivers">Noise-Hunting with Portable Receivers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#controlled-power-down-testing">Controlled Power-Down Testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-source-localization.html#conducted-vs-radiated-noise-testing">Conducted vs. Radiated Noise Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#ferrite-chokes-toroids">Ferrite Chokes &amp; Toroids</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#common-mode-chokes">Common-Mode Chokes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#shielding-filtering">Shielding &amp; Filtering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostics/noise-mitigation.html#antenna-placement-orientation">Antenna Placement &amp; Orientation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics/mitigation.html">Noise Mitigation Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/mitigation.html#ferrite-chokes-toroids">Ferrite Chokes &amp; Toroids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/mitigation.html#common-mode-chokes">Common-Mode Chokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/mitigation.html#shielding-filtering">Shielding &amp; Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostics/mitigation.html#antenna-placement-orientation">Antenna Placement &amp; Orientation</a></li>
 </ul>
 </li>
 </ul>
