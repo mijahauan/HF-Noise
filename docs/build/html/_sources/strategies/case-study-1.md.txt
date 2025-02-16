@@ -1,11 +1,11 @@
 # Case Study 1: Waterfall Changes When Moving a Feedline
 
 ## Symptom:
-- The SDR waterfall display shows fluctuations in noise levels when a coax feedline is repositioned.
+- The SDR waterfall display shows fluctuations in noise levels when moving the feedline.
 - The noise is broadband but follows the motion of the cable.
 
 ## Analysis:
-- This suggests common-mode noise, where the feedline is acting as an unintended antenna.
+- This suggests common-mode noise, where the feedline is acting as an unintended antenna. Alternatively or additionally, the movement of a conducting material near the dipole may deform the EM field of the incident wave in the aperture of the antenna.
 - Possible sources: Poor shielding, improper grounding, or lack of a common-mode choke.
 
 ## Mitigation Steps:

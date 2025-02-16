@@ -50,13 +50,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../basics/digital-communication-noise.html">Digital &amp; Communication-Related Noise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/common-sources.html">Common HF Noise Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basics/other-noise-terms.html">Other Basic Noise Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basics/definitions.html">Important Definitions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tools &amp; Techniques</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-detection-tools.html">Noise Detection Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-measurement-tools.html">Noise Measurement Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-source-localization.html">Noise Source Localization Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../diagnostics/noise-mitigation.html">Noise Mitigation Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/detection-measurement.html">Noise Detection and Measurement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/source-identification.html">Noise Source Localization Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diagnostics/mitigation.html">Noise Mitigation Techniques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Strategies and Tactics</span></p>
 <ul class="current">
@@ -109,14 +109,14 @@
 <section id="symptom">
 <h2>Symptom:<a class="headerlink" href="#symptom" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>The SDR waterfall display shows fluctuations in noise levels when a coax feedline is repositioned.</p></li>
+<li><p>The SDR waterfall display shows fluctuations in noise levels when moving the feedline.</p></li>
 <li><p>The noise is broadband but follows the motion of the cable.</p></li>
 </ul>
 </section>
 <section id="analysis">
 <h2>Analysis:<a class="headerlink" href="#analysis" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>This suggests common-mode noise, where the feedline is acting as an unintended antenna.</p></li>
+<li><p>This suggests common-mode noise, where the feedline is acting as an unintended antenna. Alternatively or additionally, the movement of a conducting material near the dipole may deform the EM field of the incident wave in the aperture of the antenna.</p></li>
 <li><p>Possible sources: Poor shielding, improper grounding, or lack of a common-mode choke.</p></li>
 </ul>
 </section>

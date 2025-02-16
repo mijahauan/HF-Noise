@@ -1,6 +1,6 @@
-# Noise Source Localization Techniques
+# Noise Source Identification Techniques
 
-These techniques help pinpoint sources of interference, whether from external sources or within the operator’s station.
+These techniques help recognize and locate sources of interference, whether from external sources or within the operator’s station.
 
 ## Direction-Finding Methods
 

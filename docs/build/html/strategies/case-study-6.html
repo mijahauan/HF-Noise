@@ -129,7 +129,15 @@
 <li><p>The artifacts increase in intensity when pointing a directional antenna toward a known FM broadcast tower.</p></li>
 <li><p>The SDR’s front-end overloads, causing broad, unpredictable interference across the spectrum.</p></li>
 </ul>
-<p><img alt="" src="images/multiple_FM.png" /></p>
+<p><img alt="" src="../_images/multiple_FM.png" /></p>
+<ul class="simple">
+<li><p>28.1 MHz &lt;– 101.5 FM</p></li>
+<li><p>32.9 MHz &lt;–  96.7 FM</p></li>
+<li><p>37.5 MHz &lt;–  93.9 FM</p></li>
+<li><p>38.3 MHz &lt;–  91.3 FM</p></li>
+<li><p>40.1 MHz &lt;–  89.5 FM</p></li>
+<li><p>40.7 MHz &lt;–  88.9 FM</p></li>
+</ul>
 </section>
 <section id="step-1-identify-artifacts-from-fm-broadcast-stations">
 <h2>Step 1: Identify Artifacts from FM Broadcast Stations<a class="headerlink" href="#step-1-identify-artifacts-from-fm-broadcast-stations" title="Link to this heading"></a></h2>
@@ -178,36 +186,57 @@ Example: Two FM stations at 88.5 MHz and 99.5 MHz could produce an intermodulati
 <h2>Step 3: Verify the FM Source<a class="headerlink" href="#step-3-verify-the-fm-source" title="Link to this heading"></a></h2>
 <section id="to-confirm-that-local-fm-stations-are-the-problem">
 <h3>To confirm that local FM stations are the problem:<a class="headerlink" href="#to-confirm-that-local-fm-stations-are-the-problem" title="Link to this heading"></a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1.	Use a Band-Pass Filter for HF
-- Insert a high-pass or band-pass filter before the SDR to block VHF signals from reaching the front end.
-- If FM interference disappears, it was likely front-end overload.
-2.	Listen in WFM Mode
-- Tune your SDR to 88–108 MHz and listen in wideband FM mode.
--Identify strong signals and note the most powerful stations.
-3.	Check for Mix Products Using a Second SDR
-- If you have another receiver, use it to check if the same artifacts appear.
-- If only one receiver is affected, the issue is likely internal to that SDR (aliasing, overload, or poor filtering).
-</pre></div>
-</div>
+<ol class="arabic simple">
+<li><p>Use a Band-Pass Filter for HF</p>
+<ul class="simple">
+<li><p>Insert a high-pass or band-pass filter before the SDR to block VHF signals from reaching the front end.</p></li>
+<li><p>If FM interference disappears, it was likely front-end overload.</p></li>
+</ul>
+</li>
+<li><p>Listen in WFM Mode</p>
+<ul class="simple">
+<li><p>Tune your SDR to 88–108 MHz and listen in wideband FM mode.
+-Identify strong signals and note the most powerful stations.</p></li>
+</ul>
+</li>
+<li><p>Check for Mix Products Using a Second SDR</p>
+<ul class="simple">
+<li><p>If you have another receiver, use it to check if the same artifacts appear.</p></li>
+<li><p>If only one receiver is affected, the issue is likely internal to that SDR (aliasing, overload, or poor filtering).</p></li>
+</ul>
+</li>
+</ol>
 </section>
 </section>
 <section id="step-4-mitigation-techniques">
 <h2>Step 4: Mitigation Techniques<a class="headerlink" href="#step-4-mitigation-techniques" title="Link to this heading"></a></h2>
 <section id="once-you-confirm-that-fm-broadcast-stations-are-interfering-try-the-following-solutions">
 <h3>Once you confirm that FM broadcast stations are interfering, try the following solutions:<a class="headerlink" href="#once-you-confirm-that-fm-broadcast-stations-are-interfering-try-the-following-solutions" title="Link to this heading"></a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1.	Use a Broadcast Band Notch Filter
-- A notch filter for 88–108 MHz can prevent FM signals from overloading the SDR.
-- These are available as commercial filters (e.g., RTL-SDR Blog FM Notch, Nooelec Flamingo+ FM) or DIY tuned circuits.
-2.	Reduce SDR Gain
-- Lowering gain settings can reduce overload distortion without significantly affecting HF signals.
-3.	Use a Better Antenna Setup
-- If using an active preamp, place an FM trap filter before the amplifier.
-- Reorient antennas to minimize pickup of nearby broadcast stations.
-4.	Improve SDR Shielding
-- Some SDRs (like cheap RTL-SDR dongles) lack proper shielding, allowing strong RF to leak into the circuit.
-- Using a metal enclosure or a better-shielded SDR (e.g., Airspy HF+, SDRplay RSPdx) can help.
-</pre></div>
-</div>
+<ol class="arabic simple">
+<li><p>Use a Broadcast Band Notch Filter</p>
+<ul class="simple">
+<li><p>A notch filter for 88–108 MHz can prevent FM signals from overloading the SDR.</p></li>
+<li><p>These are available as commercial filters (e.g., RTL-SDR Blog FM Notch, Nooelec Flamingo+ FM) or DIY tuned circuits.</p></li>
+</ul>
+</li>
+<li><p>Reduce SDR Gain</p>
+<ul class="simple">
+<li><p>Lowering gain settings can reduce overload distortion without significantly affecting HF signals.</p></li>
+</ul>
+</li>
+<li><p>Use a Better Antenna Setup</p>
+<ul class="simple">
+<li><p>If using an active preamp, place an FM trap filter before the amplifier.</p></li>
+<li><p>Reorient antennas to minimize pickup of nearby broadcast stations.</p></li>
+</ul>
+</li>
+<li><p>Improve SDR Shielding</p>
+<ul class="simple">
+<li><p>Some SDRs (like cheap RTL-SDR dongles) lack proper shielding, allowing strong RF to leak into the circuit.</p></li>
+<li><p>Using a metal enclosure or a better-shielded SDR (e.g., Airspy HF+, SDRplay RSPdx) can help.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 </section>
 <section id="conclusion">
