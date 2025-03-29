@@ -1,4 +1,4 @@
-# Case Study 1: Noise Heaps
+# Case Study 7: Noise Heaps
 
 ## Symptom:
 - Spectrum display shows spikey heaps of noise at various frequencies.
