@@ -1,16 +1,26 @@
 # Natural Noise Sources
 
 These are inherent to the environment and cannot be eliminated but can be mitigated.
-## Atmospheric Noise (Static)
+
+## Earth Noise
+- Soil moisture and temperature variations
+- Earthquakes, volcanic eruptions
+- Thermal noise from soil and vegetation
+- Man-made in-ground structures
+- Variations in conductivity
+
+## Atmospheric Noise
 - Source: Lightning, thunderstorms, natural electrical discharges.
 - Characteristics: Bursts of static, most prominent below 30 MHz.
 - Identification: Increases during storms, varies seasonally.
 - Mitigation: Use directional antennas, signal averaging, and DSP noise blankers.
+
 ## Ionospheric Noise & Effects
 - Source: Solar activity, geomagnetic storms, auroral events.
 - Characteristics: Causes signal fading, warbling, or absorption.
 - Identification: Correlates with solar indices (Kp, A indices), satellite data.
 - Mitigation: Operate on frequencies less affected (e.g., NVIS for low bands, higher frequencies during storms).
+
 ## Galactic Noise
 - Source: The Sun, Jupiter, and background cosmic radiation.
 - Characteristics: Affects VHF/UHF bands, appears as steady broadband noise.

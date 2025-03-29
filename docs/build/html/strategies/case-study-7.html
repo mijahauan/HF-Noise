@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case Study 2: 60Hz Humming Noise on Certain Frequencies &mdash; HF-Noise 0.0.1-alpha documentation</title>
+  <title>Case Study 1: Noise Heaps &mdash; HF-Noise 0.0.1-alpha documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Case Study 3: Periodic Short-Duration Pops in Audio" href="case-study-3.html" />
-    <link rel="prev" title="Case Study 1: Waterfall Changes When Moving a Feedline" href="case-study-1.html" /> 
+    <link rel="next" title="External Links" href="../resources/external-links.html" />
+    <link rel="prev" title="Case Study 6: Suspected FM Broadcast Station Interference" href="case-study-6.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -62,17 +62,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="identification-mitigation-strategies.html">General Identification &amp; Mitigation Strategies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="case-study-1.html">Case Study 1: Waterfall Changes When Moving a Feedline</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Case Study 2: 60Hz Humming Noise on Certain Frequencies</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="case-study-2.html">Case Study 2: 60Hz Humming Noise on Certain Frequencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case-study-6.html">Case Study 6: Suspected FM Broadcast Station Interference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Case Study 1: Noise Heaps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#symptom">Symptom:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#analysis">Analysis:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mitigation-steps">Mitigation Steps:</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="case-study-3.html">Case Study 3: Periodic Short-Duration Pops in Audio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case-study-4.html">Case Study 4: Repeating Spectral Humps at 1.8MHz Intervals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case-study-5.html">Case Study 5: Noise Floor from DC to 60MHz is Higher than ITU Models Predict</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case-study-6.html">Case Study 6: Suspected FM Broadcast Station Interference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case-study-7.html">Case Study 1: Noise Heaps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul>
@@ -95,9 +95,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Case Study 2: 60Hz Humming Noise on Certain Frequencies</li>
+      <li class="breadcrumb-item active">Case Study 1: Noise Heaps</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/strategies/case-study-2.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/strategies/case-study-7.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -105,53 +105,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="case-study-2-60hz-humming-noise-on-certain-frequencies">
-<h1>Case Study 2: 60Hz Humming Noise on Certain Frequencies<a class="headerlink" href="#case-study-2-60hz-humming-noise-on-certain-frequencies" title="Link to this heading"></a></h1>
+  <section id="case-study-1-noise-heaps">
+<h1>Case Study 1: Noise Heaps<a class="headerlink" href="#case-study-1-noise-heaps" title="Link to this heading"></a></h1>
 <section id="symptom">
 <h2>Symptom:<a class="headerlink" href="#symptom" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>A distinct hum at multiples of 60Hz (50Hz in some regions).</p></li>
-<li><p>The noise is stronger on some bands than others.</p></li>
+<li><p>Spectrum display shows spikey heaps of noise at various frequencies.</p></li>
+<li><p>The noise is broadband.</p></li>
 </ul>
 </section>
 <section id="analysis">
 <h2>Analysis:<a class="headerlink" href="#analysis" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>This is likely power-line interference, possibly from poor grounding, power supplies, or nearby transmission lines.</p></li>
-<li><p>Nearby appliances, dimmers, or solar inverters could also be culprits.</p></li>
+<li><p>Suggests:</p></li>
+<li><p>Possible sources:</p></li>
 </ul>
 </section>
 <section id="mitigation-steps">
 <h2>Mitigation Steps:<a class="headerlink" href="#mitigation-steps" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Power Down Test:</p></li>
+<li><p>Test Isolation: Insert a common-mode choke (ferrite on coax, Mix 31 for HF) near the antenna and near the receiver.</p></li>
+<li><p>Check Grounding: Ensure the feedline shield is grounded at a single point.</p></li>
+<li><p>Re-route the Cable: Keep coax away from noise sources (AC lines, routers, computers).</p></li>
+<li><p>Improve Shielding: Use higher-quality coax like LMR-400 or clamp ferrites on both ends.</p></li>
 </ol>
-<ul class="simple">
-<li><p>Turn off all breakers in your home, leaving only the radio on battery power.</p></li>
-<li><p>If the noise disappears, it’s inside your home. If not, it’s external.</p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p>Use a Portable AM Radio:</p></li>
-</ol>
-<ul class="simple">
-<li><p>Tune to a quiet frequency and walk around.</p></li>
-<li><p>If the noise gets stronger near power lines, suspect arcing insulators.</p></li>
-</ul>
-<ol class="arabic simple" start="3">
-<li><p>Mitigate Internally:</p></li>
-</ol>
-<ul class="simple">
-<li><p>Add ferrites to power cords of computers, routers, and LED lights.</p></li>
-<li><p>Replace noisy switching power supplies with linear ones.</p></li>
-<li><p>Improve station grounding with a dedicated RF ground.</p></li>
-</ul>
-<ol class="arabic simple" start="4">
-<li><p>Mitigate Externally:</p></li>
-</ol>
-<ul class="simple">
-<li><p>If a power line is the cause, document the issue and report it to the power company.</p></li>
-<li><p>Use a small loop antenna to confirm directional noise sources.</p></li>
-</ul>
+<p>A battery charger in reconditioning mode:
+<img alt="" src="../_images/noise_heaps_recondition.png" /></p>
+<p>The same charger in charging mode:
+<img alt="" src="../_images/noise_heaps_charge.png" /></p>
 </section>
 </section>
 
@@ -159,8 +140,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="case-study-1.html" class="btn btn-neutral float-left" title="Case Study 1: Waterfall Changes When Moving a Feedline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="case-study-3.html" class="btn btn-neutral float-right" title="Case Study 3: Periodic Short-Duration Pops in Audio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="case-study-6.html" class="btn btn-neutral float-left" title="Case Study 6: Suspected FM Broadcast Station Interference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../resources/external-links.html" class="btn btn-neutral float-right" title="External Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

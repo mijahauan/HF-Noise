@@ -1,6 +1,6 @@
 # HF Noise Identification and Mitigation Guide
 
-Using an SDR with ka9q-radio to identify and mitigate controllable noise interfering with HF signal reception.
+Using a Software-Defined Radio with ka9q-radio and ka9q-web to identify and mitigate controllable noise interfering with HF signal reception.
 
 ```{toctree}
 :maxdepth: 2
@@ -35,6 +35,7 @@ strategies/case-study-3.md
 strategies/case-study-4.md
 strategies/case-study-5.md
 strategies/case-study-6.md
+strategies/case-study-7.md
 ```
 
 ```{toctree}
